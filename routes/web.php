@@ -34,9 +34,6 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 	Route::get('/dashboard', function () {
     	return view('admin.index');
 	});
-
-	/*product type insert*/
-	Route::post('/productinsert','AdminController@productinsert');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
